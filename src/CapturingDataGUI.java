@@ -1,4 +1,7 @@
-
+/* Mr. Kaune
+    March 22,2017
+    This program does...
+*/
 import java.awt.Color;
 
 /*
@@ -29,12 +32,14 @@ public class CapturingDataGUI extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jPanel1 = new javax.swing.JPanel();
-        jLabel1 = new javax.swing.JLabel();
-        jTextField1 = new javax.swing.JTextField();
-        jButton1 = new javax.swing.JButton();
-        jLabel2 = new javax.swing.JLabel();
-        jMenuBar1 = new javax.swing.JMenuBar();
+        birthdayPanel = new javax.swing.JPanel();
+        nameLabel = new javax.swing.JLabel();
+        inputName = new javax.swing.JTextField();
+        enterButton = new javax.swing.JButton();
+        outputLabel = new javax.swing.JLabel();
+        jScrollPane1 = new javax.swing.JScrollPane();
+        jTextArea1 = new javax.swing.JTextArea();
+        birthdayMenu = new javax.swing.JMenuBar();
         jMenu1 = new javax.swing.JMenu();
         jMenuItem1 = new javax.swing.JMenuItem();
         jMenu2 = new javax.swing.JMenu();
@@ -44,52 +49,81 @@ public class CapturingDataGUI extends javax.swing.JFrame {
         jMenuItem4 = new javax.swing.JMenuItem();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setBackground(new java.awt.Color(153, 153, 255));
         setPreferredSize(new java.awt.Dimension(800, 600));
 
-        jLabel1.setFont(new java.awt.Font("Tahoma", 0, 36)); // NOI18N
-        jLabel1.setForeground(new java.awt.Color(204, 51, 0));
-        jLabel1.setText("Enter your Name:");
-        jLabel1.addMouseListener(new java.awt.event.MouseAdapter() {
+        birthdayPanel.setBackground(new java.awt.Color(255, 102, 102));
+
+        nameLabel.setFont(new java.awt.Font("Tahoma", 0, 36)); // NOI18N
+        nameLabel.setForeground(new java.awt.Color(204, 51, 0));
+        nameLabel.setText("Enter your Name:");
+        nameLabel.setName(""); // NOI18N
+        nameLabel.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
-                jLabel1MouseClicked(evt);
+                nameLabelMouseClicked(evt);
             }
         });
 
-        jButton1.setText("Enter");
-        jButton1.addActionListener(new java.awt.event.ActionListener() {
+        inputName.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton1ActionPerformed(evt);
+                inputNameActionPerformed(evt);
             }
         });
 
-        jLabel2.setText("Text goes here.");
+        enterButton.setText("Enter");
+        enterButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                enterButtonActionPerformed(evt);
+            }
+        });
 
-        javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
-        jPanel1.setLayout(jPanel1Layout);
-        jPanel1Layout.setHorizontalGroup(
-            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel1Layout.createSequentialGroup()
+        outputLabel.setIcon(new javax.swing.ImageIcon("Y:\\NN.png")); // NOI18N
+        outputLabel.setText("xxx");
+        outputLabel.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                outputLabelMouseClicked(evt);
+            }
+        });
+
+        jTextArea1.setColumns(20);
+        jTextArea1.setRows(5);
+        jTextArea1.setText("123456789");
+        jTextArea1.setToolTipText("");
+        jScrollPane1.setViewportView(jTextArea1);
+
+        javax.swing.GroupLayout birthdayPanelLayout = new javax.swing.GroupLayout(birthdayPanel);
+        birthdayPanel.setLayout(birthdayPanelLayout);
+        birthdayPanelLayout.setHorizontalGroup(
+            birthdayPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(birthdayPanelLayout.createSequentialGroup()
                 .addGap(47, 47, 47)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jLabel2)
-                    .addComponent(jButton1)
-                    .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                        .addComponent(jLabel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(jTextField1)))
-                .addGap(0, 71, Short.MAX_VALUE))
+                .addGroup(birthdayPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(birthdayPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                        .addComponent(nameLabel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(inputName))
+                    .addGroup(birthdayPanelLayout.createSequentialGroup()
+                        .addGroup(birthdayPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(outputLabel)
+                            .addComponent(enterButton))
+                        .addGap(18, 18, 18)
+                        .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addGap(0, 22, Short.MAX_VALUE))
         );
-        jPanel1Layout.setVerticalGroup(
-            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel1Layout.createSequentialGroup()
+        birthdayPanelLayout.setVerticalGroup(
+            birthdayPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(birthdayPanelLayout.createSequentialGroup()
                 .addGap(46, 46, 46)
-                .addComponent(jLabel1)
+                .addComponent(nameLabel)
                 .addGap(18, 18, 18)
-                .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(inputName, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
-                .addComponent(jButton1)
-                .addGap(18, 18, 18)
-                .addComponent(jLabel2)
-                .addContainerGap(78, Short.MAX_VALUE))
+                .addGroup(birthdayPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(birthdayPanelLayout.createSequentialGroup()
+                        .addComponent(enterButton)
+                        .addGap(18, 18, 18)
+                        .addComponent(outputLabel))
+                    .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
         jMenu1.setText("File");
@@ -103,7 +137,7 @@ public class CapturingDataGUI extends javax.swing.JFrame {
         });
         jMenu1.add(jMenuItem1);
 
-        jMenuBar1.add(jMenu1);
+        birthdayMenu.add(jMenu1);
 
         jMenu2.setText("Edit");
 
@@ -111,7 +145,7 @@ public class CapturingDataGUI extends javax.swing.JFrame {
         jMenuItem2.setText("Cut");
         jMenu2.add(jMenuItem2);
 
-        jMenuBar1.add(jMenu2);
+        birthdayMenu.add(jMenu2);
 
         jMenu3.setText("Help");
 
@@ -133,33 +167,34 @@ public class CapturingDataGUI extends javax.swing.JFrame {
         });
         jMenu3.add(jMenuItem4);
 
-        jMenuBar1.add(jMenu3);
+        birthdayMenu.add(jMenu3);
 
-        setJMenuBar(jMenuBar1);
+        setJMenuBar(birthdayMenu);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel1, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(birthdayPanel, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel1, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(birthdayPanel, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+    private void enterButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_enterButtonActionPerformed
         String name = "";
-        name = jTextField1.getText();
-        jLabel2.setText("Hey there, " + name);
-    }//GEN-LAST:event_jButton1ActionPerformed
+        name = inputName.getText();
+        outputLabel.setText("Hey there, " + name);
+        jTextArea1.setText("");
+    }//GEN-LAST:event_enterButtonActionPerformed
 
-    private void jLabel1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel1MouseClicked
-        jLabel1.setForeground(Color.blue);
-    }//GEN-LAST:event_jLabel1MouseClicked
+    private void nameLabelMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_nameLabelMouseClicked
+        nameLabel.setForeground(Color.blue);
+    }//GEN-LAST:event_nameLabelMouseClicked
 
     private void jMenuItem1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem1ActionPerformed
         // TODO add your handling code here:
@@ -172,6 +207,14 @@ public class CapturingDataGUI extends javax.swing.JFrame {
     private void jMenuItem4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem4ActionPerformed
         System.exit(0);
     }//GEN-LAST:event_jMenuItem4ActionPerformed
+
+    private void outputLabelMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_outputLabelMouseClicked
+        
+    }//GEN-LAST:event_outputLabelMouseClicked
+
+    private void inputNameActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_inputNameActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_inputNameActionPerformed
 
     /**
      * @param args the command line arguments
@@ -209,18 +252,20 @@ public class CapturingDataGUI extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton jButton1;
-    private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel2;
+    private javax.swing.JMenuBar birthdayMenu;
+    private javax.swing.JPanel birthdayPanel;
+    private javax.swing.JButton enterButton;
+    private javax.swing.JTextField inputName;
     private javax.swing.JMenu jMenu1;
     private javax.swing.JMenu jMenu2;
     private javax.swing.JMenu jMenu3;
-    private javax.swing.JMenuBar jMenuBar1;
     private javax.swing.JMenuItem jMenuItem1;
     private javax.swing.JMenuItem jMenuItem2;
     private javax.swing.JMenuItem jMenuItem3;
     private javax.swing.JMenuItem jMenuItem4;
-    private javax.swing.JPanel jPanel1;
-    private javax.swing.JTextField jTextField1;
+    private javax.swing.JScrollPane jScrollPane1;
+    private javax.swing.JTextArea jTextArea1;
+    private javax.swing.JLabel nameLabel;
+    private javax.swing.JLabel outputLabel;
     // End of variables declaration//GEN-END:variables
 }
