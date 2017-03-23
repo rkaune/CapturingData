@@ -1,5 +1,5 @@
 /* Mr. Kaune
-    March 22,2017
+    March 23,2017
     This program does...
 */
 import java.awt.Color;
@@ -193,7 +193,7 @@ public class CapturingDataGUI extends javax.swing.JFrame {
     }//GEN-LAST:event_enterButtonActionPerformed
 
     private void nameLabelMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_nameLabelMouseClicked
-        nameLabel.setForeground(Color.blue);
+        nameLabel.setForeground(Color.yellow);
     }//GEN-LAST:event_nameLabelMouseClicked
 
     private void jMenuItem1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem1ActionPerformed
